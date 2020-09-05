@@ -1,0 +1,65 @@
+<div class="navigation">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header nav_2">
+        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+          data-target="#navigation-dropdown-tabs">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation-dropdown-tabs">
+        <ul class="nav navbar-nav">
+          <li><a (click)="switchMenu()" href="{{_menuData[0].url}}" data-title="home">{{_menuData[0].name}}</a></li>
+          <li><a (click)="switchMenu()" href="{{_menuData[1].url}}" data-title="about">{{_menuData[1].name}}</a></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-title="service" data-toggle="dropdown">{{_menuData[2].name}} <b class="caret"></b></a>
+            <ul class="dropdown-menu multi-column columns-3 menu-position data-content-wrapper">
+              <div class="row">
+                <div *ngFor="let item of _dataCategories;" class="col-sm-4">
+                  <ul *ngIf="item.productCategories.length ==0" class="single-column">
+                    <li>
+                      <h6><a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item.name}}</a></h6>
+                    </li>
+                  </ul>
+                  <ul *ngIf="item.productCategories.length !=0" class="multi-column-dropdown">
+                    <h6><a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item.name}}</a></h6>
+                    <li *ngFor="let item2 of item.productCategories">
+                      <a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item2.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+   
+                <div class="clearfix"></div>
+              </div>
+            </ul>
+          </li>
+          
+          <li><a (click)="switchMenu()" href="{{_menuData[3].url}}" data-title="recruitment">{{_menuData[3].name}}</a></li>
+          <li><a (click)="switchMenu()" href="{{_menuData[4].url}}" data-title="contact">{{_menuData[4].name}}</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="clearfix"> </div>
+<!-- breadcrumbs -->
+<div class="breadcrumb_dress">
+  <div class="container">
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        </a>
+        <i class="glyphicon glyphicon-hand-right"></i>
+      </li>
+ 
+      <li *ngFor="let item of _currentBreabcrumb.split(',');last as isLast">{{item}}<i *ngIf="!isLast" class="glyphicon glyphicon-hand-right"></i></li>
+      
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="col-md-3 w3ls_mobiles_grid_left side-bar">
+    <div class="w3ls_mobiles_grid_left_grid">
+        <h3 class="agileits-sear-head">Dịch vụ</h3>
+        <div class="w3ls_mobiles_grid_left_grid_sub">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div *ngFor="let item of _serviceMenu;" class="member-item">
+                    <div *ngIf="item.productCategories.length ==0">
+                        <div class="panel-heading single-item" role="tab">
+                            <h4 class="panel-title asd">
+                                <a href="#" class="pa_italic">
+                                    {{item.name}}
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div *ngIf="item.productCategories.length != 0">
+                        <div class="panel-heading group-item" role="tab" id="{{'heading'+item.id}}">
+                            <h4 class="panel-title asd">
+                                <a class="pa_italic" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    href="{{'#collapse' +item.id}}" aria-expanded="true"
+                                    [attr.aria-controls]="'collapse' + item.id">
+                                    <span class="glyphicon glyphicon-forward" aria-hidden="true"></span><i
+                                        class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></i>{{item.name}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="{{'collapse'+ item.id}}" class="panel-collapse collapse in" role="tabpanel"
+                            [attr.aria-labelledby]="'heading' + item.id">
+                            <div class="panel-body panel_text">
+                                <ul>
+                                    <li *ngFor="let item2 of item.productCategories;"><a href="products.html">{{item2.name}}</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="w3ls_mobiles_grid_left_grid">
+        <h3 class="agileits-sear-head">Nổi bật</h3>
+        <div class="w3ls_mobiles_grid_left_grid_sub">
+            <div class="ecommerce_color ecommerce_size">
+                <ul>
+                    <li><a href="#">Below $ 100</a></li>
+                    <li><a href="#">$ 100-500</a></li>
+                    <li><a href="#">$ 1k-10k</a></li>
+                    <li><a href="#">$ 10k-20k</a></li>
+                    <li><a href="#">$ Above 20k</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,6 +11,7 @@
 @import "../../../src/assets/css/popuo-box.css";
 @import "../../../src/assets/css/slicebox.css";
 @import "../css/fall-animation.scss";
+@import "../css//banner.css";
 // @import '../../../node_modules/react-notifications/lib/notifications.css';
 
 
@@ -23,18 +24,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html, body{
   font-size: 100%;
 background:	#fff;
-font-family:'Open Sans', sans-serif;
+font-family: Avenir, Arial, sans-serif !important;
 }
 p{
 margin:0;
 font-size:14px;
 }
 h1,h2,h3,h4,h5,h6{
-// font-family: 'Glegoo', serif;
-font-family: inherit !important;
-margin:0;
-font-weight: 500;
 line-height: 1.1;
+font-family: Futura, Arial, sans-serif !important;
+font-weight: 400;
+color: #002c65;
 }
 ul,label{
 margin:0;
@@ -528,9 +528,9 @@ font-size: 1.1em;
 z-index: 100;
 }
 .navigation {
-  margin: 1em 0 0;
+
 text-align:center;
-background:#3c43a4;
+background:#029ddfed;
 }
 .navbar-nav {
   float: none;
@@ -5090,12 +5090,8 @@ h3.agileits-sear-head {
 }
 h3.heading-tittle {
   text-align: center;
-  color: #000;
   font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding: 0.5em;
-  text-shadow: 2px 2px 4px #1b1919;
+ 
 }
 .menu-position{
   position: absolute;
@@ -5271,7 +5267,7 @@ h3.tittle-w3l:after {
 
 // content
 .container-content{
-  width: 100% !important;
+  // width: 100% !important;
 }
 // end content
 
@@ -5474,7 +5470,7 @@ h3.tittle-w3l:after {
 
 .image-holder {
 
-  background: url(../videos//dark.gif) repeat center;
+  // background: url(../videos//dark.gif) repeat center;
   position: fixed;
   min-width: 100%;
   min-height: 100%;
@@ -5494,14 +5490,17 @@ h3.tittle-w3l:after {
   z-index: 1;
 }
 .txt28 {
-  font-family: inherit;
-  color: #5d5d5d;
-  font-weight: bold;
-  padding-top: .5em;
+    color: white;
+    padding-top: 1.5em;
+    height: 70px;
+    background-color: #2f75b3;
+    text-align: center;
+    font-size: 18px;
 }
 
 .project-img-div{
   overflow: hidden;
+  margin-top: 35px;
 }
 
 .project-img-div:hover .project-img,
@@ -5512,13 +5511,12 @@ h3.tittle-w3l:after {
 
 a:hover .txt28,
 a:focus .txt28 {
-  color: #b3832e;
+  color: #FF5722 ;
 }
 .product-content .project-img-div img {
   object-fit: cover;
   height: 204px;
   transition: transform .5s ease;
-  border-radius: 7px;
 }
 .project-img-div img:hover {
   transform: scale(1.5);
@@ -5567,7 +5565,7 @@ a:focus .txt28 {
 
 @media (min-width: 1300px) {
   .product-content .project-img-div img {
-      height: 175px;
+      height: 250px;
   }
 }
 .product-content img {

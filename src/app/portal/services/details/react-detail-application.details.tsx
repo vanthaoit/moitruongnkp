@@ -21,7 +21,7 @@ class ReactApp extends React.Component<IReactDetailApplication, any> {
     render() {
         return (
             <div className={'renderer'}>
-                <h1 className="txt2"><span>{this.state.details$.name}</span></h1>
+                <h3 className="detail-title"><span>{this.state.details$.name}</span></h3>
                 {/* <p className="bg-text">Gia công cơ khí</p> */}
                 <br />
                 <ReactDetail details$={this.state.details$} />

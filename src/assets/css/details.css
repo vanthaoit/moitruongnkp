@@ -1,0 +1,30 @@
+.product-single-w3l {
+    border-top: 1px solid #1accfd;
+}
+.product-single-w3l p i {
+    color: #1accfd;
+    margin-right: 11px;
+    font-size: 24px;
+}
+
+.product-single-w3l ul li {
+    list-style: inside;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.7;
+}
+
+.product-single-w3l p {
+   
+    margin: 15px 0;
+    letter-spacing: 0.5px;
+}
+
+.flexslider ol li img{
+    height: 80px;
+}
+
+.flex-control-thumbs li{
+    margin: 0 0 0 0 !important;
+    width: 33.2% !important;
+}

@@ -34,7 +34,8 @@
     "firebase": "^7.16.0",
     "font-awesome": "^4.7.0",
     "jcarousel": "^0.3.9",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
+    "js-image-zoom": "^0.7.0",
     "magnific-popup": "^1.1.0",
     "mdbootstrap": "^4.18.0",
     "minicart": "^3.0.6",
@@ -49,6 +50,7 @@
     "react-responsive-carousel": "^3.2.7",
     "react-scripts-scss-ts": "^2.17.1",
     "react-simple-image-slider": "^1.0.3",
+    "react-typescript-raw-html": "0.0.9",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

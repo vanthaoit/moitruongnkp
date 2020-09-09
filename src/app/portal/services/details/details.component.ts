@@ -43,18 +43,18 @@ export class DetailsComponent implements OnInit {
       ReactDetailApplication.initialize('react-renderer', this.injector, this._dataHttpService);
       console.log(this._dataHttpService);
     }, error => {
-      debugger
+      
       this._httpService.handleError(error)
     });
   }
   getRelated(){
     this._httpService.post('Product/GetWithProcedure/'+StoreProcedureConstants.usp_SEL_IndexSlider,[{"Key":'Id',"Value":this._idTarge.toString()}]).subscribe((resp:any)=>{
-      debugger
+      
       ReactRelativeApplication.initialize('render-relative',resp);
       initialRelativeLoad();
       console.log("related = "+resp);
     }, error => {
-      debugger
+      
       this._httpService.handleError(error)
     });
 

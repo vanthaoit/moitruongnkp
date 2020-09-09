@@ -10,8 +10,10 @@
 @import "../../../src/assets/css/jquery.countdown.css";
 @import "../../../src/assets/css/popuo-box.css";
 @import "../../../src/assets/css/slicebox.css";
+@import "../css/flexslider.css";
 @import "../css/fall-animation.scss";
 @import "../css//banner.css";
+@import "../css/details.css";
 // @import '../../../node_modules/react-notifications/lib/notifications.css';
 
 
@@ -29,6 +31,12 @@ font-family: Avenir, Arial, sans-serif !important;
 p{
 margin:0;
 font-size:14px;
+
+}
+ul, li, span, p, label, i {
+  color: #002c65;
+  line-height: 1.7;
+
 }
 h1,h2,h3,h4,h5,h6{
 line-height: 1.1;
@@ -769,13 +777,10 @@ transition:.5s all;
 color:#3c43a4;
 }
 .simpleCart_shelfItem p{
-font-size: 1.2em;
-  color: #212121;
   margin: 0.5em 0 1em;
-  font-weight: 600;
+
 }
 .simpleCart_shelfItem p span{
-  color: #212121;
   font-size: .8em;
   /* text-decoration: line-through; */
   padding-right: 1em;
@@ -5103,12 +5108,16 @@ h3.heading-tittle {
 
 /*-- tittle heading --*/
 h3.tittle-w3l {
-  color: #000;
   font-size: 3em;
   text-align: center;
   margin-bottom: 50px;
   position: relative;
   padding-bottom: 20px;
+}
+h3.detail-title{
+  font-size: 3em;
+  text-align: center;
+  position: relative;
 }
 span.heading-style {
   position: absolute;
@@ -5410,15 +5419,11 @@ h3.tittle-w3l:after {
   margin: 0 0 30px;
 }
 .txt2 {
-  color: #012d45;
-  font-size: 35px;
-  padding-bottom: 15px;
-  text-align: left;
+  font-size:35px;
+  font-weight: 900;
+  text-align: center;
 }
 
-.txt2 span {
-  color: #5d5d5d;
-}
 .message-content {
   text-align: justify;
 }
@@ -5743,11 +5748,9 @@ a:focus .txt28 {
   max-width: 100%;
   height: auto !important;
   max-height: 150px;
-  border-radius: 7px;
 }
 .content-bottom-in{
 
-  border-radius: 7px;
   box-shadow: 2px 2px 2px 2px #dfdfec;
   padding: 20px;
   background: #fff !important;

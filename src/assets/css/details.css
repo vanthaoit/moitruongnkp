@@ -28,3 +28,8 @@
     margin: 0 0 0 0 !important;
     width: 33.2% !important;
 }
+.detail-title h3 {
+    font-size: 30px;
+    margin-top: 0px;
+    text-align: center;
+}

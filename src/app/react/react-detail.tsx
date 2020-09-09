@@ -62,14 +62,14 @@ class ReactDetail extends React.Component<IReactBidirectionalProduct, any> {
                 </div>
               </div>
             </div>
-            <div className="col-md-7 single-right-left simpleCart_shelfItem">
-              <h3>Zeeba Premium Basmati Rice - 5 KG</h3>
+            <div className="col-md-7 single-right-left simpleCart_shelfItem detail-title">
+              <h3>{this.state.details.name}</h3>
               <div className="rating1">
                 <span className="starRating">
                   <input id="rating5" type="radio" name="rating" value="5" />
-
+                  <label htmlFor="rating5">5</label>
                   <input id="rating4" type="radio" name="rating" value="4" />
-
+                  <label htmlFor="rating4">4</label>
                   <input
                     id="rating3"
                     type="radio"
@@ -77,38 +77,20 @@ class ReactDetail extends React.Component<IReactBidirectionalProduct, any> {
                     value="3"
                     defaultChecked
                   />
-
+                  <label htmlFor="rating3">3</label>
                   <input id="rating2" type="radio" name="rating" value="2" />
-
+                  <label htmlFor="rating2">2</label>
                   <input id="rating1" type="radio" name="rating" value="1" />
+                  <label htmlFor="rating1">1</label>
                 </span>
               </div>
-              <p>
-                <span className="item_price">$950.00</span>
-                <del>$1300.00</del>
-                <label>Free delivery</label>
-              </p>
               <div className="single-infoagile"></div>
               <div className="product-single-w3l">
                 <p>
                   <i className="fa fa-hand-o-right" aria-hidden="true"></i>This
                   is a<label>Vegetarian</label> product.
                 </p>
-                <ul>
-                  <li>Best for Biryani and Pulao.</li>
-                  <li>
-                    After cooking, Zeeba Basmati rice grains attain an extra
-                    ordinary length of upto 2.4 cm/~1 inch.
-                  </li>
-                  <li>
-                    Zeeba Basmati rice adheres to the highest food afety
-                    standards as your health is paramount to us.
-                  </li>
-                  <li>
-                    Contains only the best and purest grade of basmati rice
-                    grain of Export quality.
-                  </li>
-                </ul>
+                <HTMLComponent rawHTML={this.state.details.description} />
                 <p>
                   <i className="fa fa-refresh" aria-hidden="true"></i>All food
                   products are

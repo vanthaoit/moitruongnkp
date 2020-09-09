@@ -933,8 +933,9 @@ font-size: 1em;
   margin: .3em 0.1em 0;
 }
 .rating1 {
+  text-align: center;
   direction:ltr;
-margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 .starRating:not(old) {
   display: inline-block;
@@ -2019,7 +2020,6 @@ position:relative;
   height: 340px !important;
 }
 .data-content-wrapper{
-  border-radius: 7px;
   box-shadow: 5px 5px #aba1a1;
 }
 .flex_ecommerce {
@@ -5145,7 +5145,7 @@ span.heading-style {
 h3.tittle-w3l:after {
   content: "";
   background-color: rgba(0, 0, 0, 0.33);
-  position: absolute;
+  position: static;
   bottom: 0px;
   right: 41.5%;
   width: 200px;
@@ -5751,7 +5751,7 @@ a:focus .txt28 {
 }
 .content-bottom-in{
 
-  box-shadow: 2px 2px 2px 2px #dfdfec;
+  box-shadow: 8px 8px 8px 8px #D6D6D6;
   padding: 20px;
   background: #fff !important;
   background-color: #fff;
@@ -5761,5 +5761,10 @@ a:focus .txt28 {
   padding-bottom: 15px;
 }
 
-
+@media only screen and (max-width: 414px) {
+  h3.detail-title, h3.tittle-w3l {
+    font-size: 2em;
+  }
+  
+}
 

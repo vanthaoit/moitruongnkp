@@ -14,6 +14,8 @@
 @import "../css/fall-animation.scss";
 @import "../css//banner.css";
 @import "../css/details.css";
+@import "../css/about.css";
+@import "../css//responsive.css";
 // @import '../../../node_modules/react-notifications/lib/notifications.css';
 
 
@@ -52,6 +54,13 @@ body a:hover{
 text-decoration:none;
 }
 /*-- header --*/
+.background-cover-header{
+  background-image: url("../images/bg_core_purpose.jpg");
+  background-position: initial;
+  background-repeat: round;
+  background-size: cover;
+}
+
 input[type="submit"],.panel-body ul li a,.checkout-right-basket a,.additional_info_sub_grid_right a,.panel_bottom li a,.panel-title a,.breadcrumb_dress ul li a,.multi-column-dropdown li a,.footer-copy p a,.w3_footer_grid ul li a,.agileinfo_banner_bottom1_grid_left a,.navbar-default .navbar-nav > li > a,.simpleCart_shelfItem p a,.agile_ecommerce_tab_left h5 a,.aggression ul li a,.team-bottom a{
 transition:.5s ease-in-out;
 -webkit-transition:.5s ease-in-out;
@@ -1391,11 +1400,11 @@ transition:.5s all;
 /*-- //newsletter --*/
 /*-- footer --*/
 .footer{
-padding:4em 0;
-background:#fff;
+padding:4em 2em;
+background:#0055a5;
 }
 .w3_footer_grid h3{
-color: #212121;
+color: #fff;
   font-size: 1.5em;
   margin-bottom: 2em;
   padding-bottom: .5em;
@@ -1403,28 +1412,27 @@ color: #212121;
   text-transform: uppercase;
 }
 .w3_footer_grid h3:after{
-content:'';
-background:#3c43a4;
-width:20%;
-height:2px;
-position:absolute;
-bottom:0;
-left:0;
+  content: '';
+  background: #fff;
+  width: 20%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .w3_footer_grid p{
-color:#999;
+color:#fff;
 line-height:1.8em;
 margin-bottom:2em;
 }
 .w3_footer_grid ul li {
   list-style-type: none;
   margin-bottom: 1em;
-  color: #999;
+  color: #fff;
   font-size: 14px;
 }
 .w3_footer_grid ul.address li i {
-  color:#414141;
-  border: 1px solid #414141;
+  color:#fff;
   padding: .5em;
   margin-right: 1em;
 }
@@ -1433,20 +1441,17 @@ margin-bottom:2em;
   margin-left: 3em;
 }
 .w3_footer_grid ul li a {
-  color: #999;
+  color: #fff;
   text-decoration: none;
 }
 .w3_footer_grid ul li a:hover {
 color:#212121;
 }
-.w3_footer_grid ul.info li a {
-  padding-left:2.2em;
-  background: url(../images/img-sp.png) no-repeat -6px -98px;
-}
+
 .w3_footer_grid h4{
 margin:2em 0 1em;
 font-size:1.2em;
-color:#3c43a4;
+color:#fff;
 }
 /*-- social-buttons --*/
 .agileits_social_button ul li{
@@ -1463,6 +1468,7 @@ background: url(../images/img-sp.png) no-repeat 1px -130px #da751f;
 -o-transition:.5s all;
 -ms-transition:.5s all;
 transition:.5s all;
+border-radius: 15px;
 } 
 .agileits_social_button ul li a.twitter{
 background-position:-41px -130px; 
@@ -5277,6 +5283,7 @@ h3.tittle-w3l:after {
 // content
 .container-content{
   // width: 100% !important;
+  padding: 0 2em;
 }
 // end content
 
@@ -5321,15 +5328,12 @@ h3.tittle-w3l:after {
 .about-index h4 {
   font-size: 30px;
   margin: 13px 0;
-  color: #FF5722;
 }
 .about-index p {
   margin: 0;
   letter-spacing: 1px;
   font-size: 16px;
   line-height: 1.9;
-  color: #999;
-
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -5541,7 +5545,7 @@ a:focus .txt28 {
 
 @media (min-width: 768px) {
   .product-content .project-img-div img {
-      height: 123px;
+      height: 400px;
   }
 
   .col-sm-4 a.tt-co-dong p:nth-child(2) {

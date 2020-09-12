@@ -1,0 +1,34 @@
+blockquote {
+    text-align: center;
+    line-height: 1.5em;
+    font-family: 'Futura Bold', sans-serif;
+    font-size: 34px;
+    color: #002C65;
+    border-left: none;
+    padding: 20px 30px 20px 50px;
+    position: relative;
+    font-weight: bolder;
+}
+
+blockquote:before {
+    font-family: Georgia, serif;
+    content: "”";
+    font-size: 3em;
+    font-weight: bold;
+    color: #002C65;
+    transform: rotate(180deg);
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+blockquote:after {
+    font-family: Georgia, serif;
+    content: "”";
+    font-size: 3em;
+    font-weight: bold;
+    color: #002C65;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

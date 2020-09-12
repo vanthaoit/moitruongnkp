@@ -1,6 +1,7 @@
 import * as ReactDOM from "react-dom";
 import * as React from "react";
 import { RouterConstants } from "../../core/common/router.constants";
+import { HTMLComponent } from 'react-typescript-raw-html';
 
 class ReactRepresentedItem extends React.Component<any, any> {
   constructor(props) {
@@ -19,7 +20,7 @@ class ReactRepresentedItem extends React.Component<any, any> {
           </a>
         </div>
         <h4>{this.state.details.name}</h4>
-        <p>{this.state.details.description}</p>
+        <HTMLComponent rawHTML={this.state.details.content} />
       </>
     );
   }

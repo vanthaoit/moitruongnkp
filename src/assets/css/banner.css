@@ -15,11 +15,15 @@
 }
 .promo-tile--product figure {
     background-color: #ffffff;
-    padding: 40px;
+    padding: 20px;
     place-items: center;
 }
 .promo-tile--image-on-right figure {
     flex-direction: row-reverse;
+}
+
+.promo-tile--image-on-right figure img{
+    object-fit: cover;
 }
 
 .row.display-flex > [class*='col-'] {

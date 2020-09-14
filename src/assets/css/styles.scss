@@ -16,6 +16,7 @@
 @import "../css/details.css";
 @import "../css/about.css";
 @import "../css//responsive.css";
+@import "../css/contact.css";
 // @import '../../../node_modules/react-notifications/lib/notifications.css';
 
 
@@ -3722,7 +3723,7 @@ ul.multi-column-dropdown h6 {
   background: transparent;
 }
 .navigation {
-  margin: 1em 0 0;
+  //margin: 1em 0 0;
 }
 .navbar-nav > li:nth-child(1) {
   margin-left: 0;
@@ -5284,6 +5285,14 @@ h3.tittle-w3l:after {
 .container-content{
   // width: 100% !important;
   padding: 0 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-content{
+    // width: 100% !important;
+    padding: 0 0;
+  }
+  
 }
 // end content
 

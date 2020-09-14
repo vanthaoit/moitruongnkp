@@ -39,8 +39,9 @@ class ReactData extends React.Component<IReactApplication, any> {
 
                 <div className="promo-tile promo-tile--image-on-right">
                     <div className="promo-tile--product">
-                    <figure className="row display-flex">
-                        <div className="col-md-6 col-sm-6 col-xs-12 px-0 banner-shadow">
+                    <figure className="row">
+                    {/* <figure className="row display-flex"> */}
+                        <div className="col-md-6 col-sm-12 col-xs-12 px-0 banner-shadow">
                         <img
                             className="promo-tile__hero"
                             alt="Grow a Green Thumb"
@@ -48,7 +49,7 @@ class ReactData extends React.Component<IReactApplication, any> {
                         />
                         </div>
                         <figcaption
-                        className="promo-tile__hero promo-tile--text col-md-6 col-sm-6 col-xs-12 px-0 banner-shadow"
+                        className="promo-tile__hero promo-tile--text col-md-6 col-sm-12 col-xs-12 px-0 banner-shadow"
                         >
                         <h3 className="h3">{this.props.title}</h3>
                         <p className="text">

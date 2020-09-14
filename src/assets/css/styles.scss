@@ -5741,6 +5741,13 @@ a:focus .txt28 {
 #flexiselDemo .product-name-w3l {
   text-align: center;
 }
+@media (min-width: 768px){
+    .navbar-collapse.collapse {
+      display: flex !important;
+  
+  }
+}
+
 /*-- //special-offers --*/
 
 .jcarousel-vertical {

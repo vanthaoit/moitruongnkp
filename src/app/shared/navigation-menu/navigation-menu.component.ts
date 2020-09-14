@@ -1,3 +1,4 @@
+import { MenuService } from './../../core/services/menu.service';
 import { Component, OnInit, Injector } from '@angular/core';
 import {CommonService} from  'src/app/utilities/common.service';
 import {menuData} from 'src/app/utilities/data/menu.data';
@@ -17,12 +18,12 @@ export class NavigationMenuComponent implements OnInit {
   _breabcrumbArray:any[];
   public _menuData:any[];
   _dataCategories:any;
-
-
+  _menuService:any[];
   constructor(private _commonService:CommonService,
     private curentBreadcrumb:BreadcrumbUrlService,
     private _httpService:HttpProviderService,
-    public injector: Injector) { 
+    public injector: Injector,
+    public menuService:MenuService) { 
     this._currentActiveMenu = _commonService.getBreadcrumbAddress();
     this._menuData = menuData;
     this.curentBreadcrumb.currentBreadcrumb.subscribe(message=> this._currentBreabcrumb = message);
@@ -33,6 +34,11 @@ export class NavigationMenuComponent implements OnInit {
     this._commonService.initActiveMenu();
     this.loadProducCategories();
     this._menuData = menuData;
+    this.menuService.getMenu().subscribe((resp:any[])=>{
+      this._menuService = resp;
+
+    });
+
   }
   switchMenu(){
     this._commonService.initActiveMenu();

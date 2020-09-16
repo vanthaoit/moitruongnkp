@@ -22,6 +22,7 @@
 
 .flexslider ol li img{
     height: 80px;
+    object-fit: contain;
 }
 
 .flex-control-thumbs li{
@@ -32,4 +33,10 @@
     font-size: 30px;
     margin-top: 0px;
     text-align: center;
+}
+
+.flexslider .slides img {
+
+    object-fit: revert;
+    height: 500px;
 }

@@ -13,34 +13,56 @@
       </div>
       <div class="collapse navbar-collapse" id="navigation-dropdown-tabs">
         <ul class="nav navbar-nav">
-          <li><a (click)="switchMenu()" href="{{_menuData[0].url}}" data-title="home">{{_menuData[0].name}}</a></li>
-          <li><a (click)="switchMenu()" href="{{_menuData[1].url}}" data-title="about">{{_menuData[1].name}}</a></li>
-
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-title="service" data-toggle="dropdown">{{_menuData[2].name}} <b class="caret"></b></a>
-            <ul class="dropdown-menu multi-column columns-3 menu-position data-content-wrapper">
-              <div class="row">
-                <div *ngFor="let item of _dataCategories;" class="col-sm-4">
-                  <ul *ngIf="item.productCategories.length ==0" class="single-column">
-                    <li>
-                      <h6><a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item.name}}</a></h6>
-                    </li>
-                  </ul>
-                  <ul *ngIf="item.productCategories.length !=0" class="multi-column-dropdown">
-                    <h6><a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item.name}}</a></h6>
-                    <li *ngFor="let item2 of item.productCategories">
-                      <a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item2.name}}</a>
-                    </li>
-                  </ul>
-                </div>
-   
-                <div class="clearfix"></div>
-              </div>
-            </ul>
-          </li>
           
-          <li><a (click)="switchMenu()" href="{{_menuData[3].url}}" data-title="recruitment">{{_menuData[3].name}}</a></li>
-          <li><a (click)="switchMenu()" href="{{_menuData[4].url}}" data-title="contact">{{_menuData[4].name}}</a></li>
+          <ng-container *ngFor="let menuChild of _menuService; let i=index">
+            <li *ngIf="menuChild.hasChild === null"><a (click)="switchMenu()" href="/{{menuChild.target}}/{{menuChild.url}}" data-title="{{menuChild.name}}">{{menuChild.name}}</a></li>
+            <li *ngIf="menuChild.hasChild !== null" class="dropdown">
+              <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-title="service" data-toggle="dropdown">{{menuChild.name}} <b class="caret"></b></a>
+              <ul class="dropdown-menu multi-column columns-3 menu-position data-content-wrapper">
+                <div class="row">
+                  <ng-container *ngFor="let item of _dataCategories; let j = index">
+                    
+                    <div *ngIf="item.menuId ==menuChild.id" class="dropdown">
+                      <ul *ngIf="item.productCategories.length ==0" class="single-column">
+                        <li>
+                          <h6><a href="/portal/dich-vu/{{item.alias}}">{{item.name}}</a></h6>
+                        </li>
+                      </ul>
+                      <ul *ngIf="item.productCategories.length !=0" class="multi-column-dropdown">
+                        <h6><span>{{item.name}}</span><b class="caret"></b></h6>
+                        <div class="group-sub-menu">
+                          <li *ngFor="let item2 of item.productCategories">
+                            <a href="/portal/dich-vu/{{item2.alias}}">{{item2.name}}</a>
+                          </li>
+                        </div>
+                        
+                      </ul>
+                    </div>
+                  </ng-container>
+                  
+                  <!-- <div *ngFor="let item of _dataCategories;" class="col-sm-4">
+                    <ul *ngIf="item.productCategories.length ==0" class="single-column">
+                      <li>
+                        <h6><a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item.name}}</a></h6>
+                      </li>
+                    </ul>
+                    <ul *ngIf="item.productCategories.length !=0" class="multi-column-dropdown">
+                      <h6><a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item.name}}</a></h6>
+                      <li *ngFor="let item2 of item.productCategories">
+                        <a href="{{_menuData[2].url}}/danh-muc/{{item.alias}}">{{item2.name}}</a>
+                      </li>
+                    </ul>
+                  </div> -->
+     
+                  <div class="clearfix"></div>
+                </div>
+              </ul>
+            </li>
+          </ng-container>
+          
+       
+          
+     
         </ul>
       </div>
     </nav>
@@ -63,3 +85,5 @@
     </ul>
   </div>
 </div>
+
+  

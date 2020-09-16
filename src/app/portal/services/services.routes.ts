@@ -12,9 +12,9 @@ export const servicesRoutes: Routes = [
         //localhost:4200/
         path: '', component: ServicesComponent, children: [
             //localhost:4200/front-end
-            { path: '', redirectTo: 'danh-muc/:name', pathMatch: 'full' },
+            { path: '', redirectTo: ':name', pathMatch: 'full' },
             //localhost:4200/front-end/home
-            { path: 'danh-muc/:name', loadChildren: './data/data.module#DataModule' },
+            { path: ':name', loadChildren: './data/data.module#DataModule' },
             { path: 'mechanical', loadChildren: './mechanical/mechanical.module#MechanicalModule' },
             { path: 'details/:id', loadChildren: './details/details.module#DetailsModule' },
              { path: '**', loadChildren: './business/business.module#BusinessModule' },

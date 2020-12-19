@@ -61,7 +61,7 @@
     text-decoration:none;
     font-size: .8em;
     text-align: left;
-    min-width: 24em;
+    /* min-width: 24em; */
     padding-left: 1.5em;
   }
   .single-column li h6 {
@@ -102,9 +102,9 @@
   .dropdown-menu.columns-3 {
   
     padding: 0px 15px;
-    left: -15%;
+    left: 0%;
     text-align: center;
-    /* min-width: 23em; */
+    margin-left: -15em;
   }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: none;
@@ -199,7 +199,7 @@
     font-family: Futura, Arial, sans-serif;
 }
 
-@media only screen and (max-width: 3000px){
+@media only screen and (max-width: 5000px){
     .navbar-nav > li:nth-child(1) {
         margin-left: 3em;
     }
@@ -207,6 +207,10 @@
     .navbar-nav > li > a {
         padding: 20px 30px !important;
         font-size: 15px !important;
+    }
+    .dropdown-menu.columns-3{
+      min-width: 400px;
+      margin-left: 0em;
     }
 }
 
@@ -219,6 +223,10 @@
         padding: 20px 25px !important;
         font-size: 15px !important;
     }
+    .dropdown-menu.columns-3{
+      min-width: 400px;
+      margin-left: 0em;
+    }
 }
 
 @media only screen and (max-width: 1500px){
@@ -230,6 +238,10 @@
         padding: 20px 15px !important;
         font-size: 12px !important;
     }
+    .dropdown-menu.columns-3{
+
+      margin-left: 0em;
+    }
 }
 
 @media only screen and (max-width: 1080px){
@@ -240,6 +252,11 @@
     .navbar-nav > li > a {
         padding: 15px 12px !important;
         font-size: 11px !important;
+    }
+    .dropdown-menu.columns-3{
+      margin-left: -8em;
+      text-align: left;
+      min-width: 300px;
     }
 }
 @media only screen and (max-width: 991px){
@@ -266,13 +283,20 @@
 
 @media only screen and (max-width: 800px){
     .navbar-nav > li > a {
-        padding: 10px 8px !important;
+        padding: 10px 7px !important;
         font-size: 9px !important;
     }
     
 }
-
 @media only screen and (max-width: 768px){
+  
+  .dropdown-menu.columns-3{
+    min-width: 200px;
+    margin-left: -8em;
+  }
+}
+
+@media only screen and (max-width: 767px){
     .single-column li h6 a,.multi-column-dropdown h6 a {
        
         color: #002c65   !important;
@@ -282,6 +306,7 @@
         font-size: .8em;
         text-align: center;
         min-width: 24em;
+        padding-left: 7em;
 
     }
 }

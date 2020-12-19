@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
       this._idTarge = params['id'];
     });
     this.getDetails();
-    this.getRelated();
+    //this.getRelated();
 
   }
 

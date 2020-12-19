@@ -118,5 +118,6 @@
 
   $(document).ready(function(){
     $('[data-imagezoom]').imageZoom();
+            
   });
 })(jQuery);

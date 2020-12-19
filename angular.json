@@ -43,6 +43,8 @@
               "src/assets/js/jquery.slicebox.js",
               "src/assets/js/move-top.js",
               "src/assets/js/jquery.flexslider.js",
+              "src/assets/js/isotope.pkgd.min.js",
+              
               "node_modules/alertifyjs/build/alertify.js",
               "node_modules/js-image-zoom/js-image-zoom.js"
 

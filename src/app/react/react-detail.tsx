@@ -37,7 +37,7 @@ class ReactDetail extends React.Component<IReactBidirectionalProduct, any> {
     return (
       <>
         <div className="banner-bootom-w3-agileits">
-          <div className="container">
+          <div className="container-detail">
             <div className="col-md-5 single-right-left ">
               <div className="grid images_3_of_2">
                 <div className="flexslider">

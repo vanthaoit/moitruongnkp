@@ -1,0 +1,351 @@
+<div class="tm-section-wrap">
+    <section id="gallery" class="tm-section">
+      <h2 class="tm-text-primary">HOẠT ĐỘNG TIÊU BIỂU NHẤT</h2>
+      <hr class="mb-5" />
+      <ul class="tm-gallery-links" style="display: none;">
+        <li>
+          <a
+            href="javascript:void(0);"
+            class="active tm-gallery-link"
+            data-filter="*"
+          >
+            <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+            Tất cả
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0);"
+            class="tm-gallery-link"
+            data-filter="portrait"
+          >
+            <i class="fas fa-portrait tm-gallery-link-icon"></i>
+            Vật liệu lọc & Hóa chất
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0);"
+            class="tm-gallery-link"
+            data-filter="nature"
+          >
+            <i class="fas fa-leaf tm-gallery-link-icon"></i>
+            Sản phẩm
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0);"
+            class="tm-gallery-link"
+            data-filter="animal"
+          >
+            <i class="fas fa-paw tm-gallery-link-icon"></i>
+            Xử lý nước thải
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0);"
+            class="tm-gallery-link"
+            data-filter="building"
+          >
+            <i class="far fa-building tm-gallery-link-icon"></i>
+            Xử lý nước cấp
+          </a>
+        </li>
+      </ul>
+      <div class="tm-gallery">
+        <ng-container *ngFor="let product of _products; let i = index">
+          <figure class="effect-honey tm-gallery-item portrait">
+            <img src="{{product.image}}" alt="Image" />
+            <figcaption>
+              <h2><i>{{product.name}}</i></h2>
+              <a href="assets/images/4D Ro nong-nguoi/NK-RN01.jpg">View more</a>
+            </figcaption>
+          </figure>
+        </ng-container>
+
+<!--         
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN01.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/4D Ro nong-nguoi/NK-RN01.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-01.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-01.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-01.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-01.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-01.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-01.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-02.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-02.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-02.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-02.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN02.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/4D Ro nong-nguoi/NK-RN02.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-02.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-02.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-03.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-03.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-02.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-02.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-03.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-03.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-02.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-02.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-03.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-03.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN03.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-03.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-03.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-03.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-03.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-03.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-04.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-04.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-04.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-04.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-04.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-04.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN04.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-04.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-05.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-05.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-05.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-05.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN05.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-05.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-05.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-05.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-06.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-06.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-06.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-06.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-06.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-06.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN06.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-06.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-07.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-07.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/4D Ro nong-nguoi/NK-RN07.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-07.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-07.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-07.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-07.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-07.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/tn/portrait-08.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-08.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-08.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-08.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-08.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-08.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-08.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-08.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item building">
+          <img src="assets/images/tn/building-09.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/building-09.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item nature">
+          <img src="assets/images/tn/nature-09.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/nature-09.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item portrait">
+          <img src="assets/images/tn/portrait-09.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/portrait-09.jpg">View more</a>
+          </figcaption>
+        </figure>
+        <figure class="effect-honey tm-gallery-item animal">
+          <img src="assets/images/tn/animal-09.jpg" alt="Image" />
+          <figcaption>
+            <h2><i>Dreamy Honey</i></h2>
+            <a href="assets/images/animal-09.jpg">View more</a>
+          </figcaption>
+        </figure> -->
+      </div>
+    </section>
+  </div>

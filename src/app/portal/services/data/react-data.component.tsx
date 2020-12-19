@@ -25,10 +25,12 @@ class ReactData extends React.Component<IReactApplication, any> {
 
             <a key={idx} href={RouterConstants.DATA_ROUTER + data.id}>
                 <div className="col-md-3">
-                    <div className="project-img-div">
-                        <img src={data.image} />
+                    <div className="wrapper-img">
+                        <div className="project-img-div">
+                            <img src={data.image} />
+                        </div>
+                        <p className="txt28">{data.name}</p>
                     </div>
-                    <p className="txt28">{data.name}</p>
                 </div>
             </a>
         ]);

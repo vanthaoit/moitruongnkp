@@ -1,5 +1,13 @@
-import { Component, ElementRef, AfterViewChecked, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  AfterViewChecked,
+  AfterViewInit,
+  OnInit,
+} from "@angular/core";
 declare function initialRelativeLoad(): any;
+declare var $: any;
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -10,7 +18,6 @@ export class AppComponent implements AfterViewChecked {
 
   ngAfterViewChecked(): void {
     var isCustomExisted = document.getElementById("customJavascript");
-
     var _script = document.createElement("script");
     _script.type = "text/javascript";
     _script.id = "customJavascript";

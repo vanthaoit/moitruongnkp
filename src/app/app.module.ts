@@ -25,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpModule,
     RouterModule.forRoot(appRoutes),
     PaginationModule.forRoot(),
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [AuthenticationGuard, UtilityService],
   bootstrap: [AppComponent]

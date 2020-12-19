@@ -35,7 +35,7 @@ export class NavigationMenuComponent implements OnInit {
     this.loadProducCategories();
     this._menuData = menuData;
     this.menuService.getMenu().subscribe((resp:any[])=>{
-      this._menuService = resp.filter(x=>x.status==true);
+      this._menuService = resp.filter(x=>x.status==true && x.target == "header").sort((a,b)=> a.displayOrder - b.displayOrder);
 
     });
 

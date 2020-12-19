@@ -13,10 +13,14 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+.promo-tile--product{
+    
+}
 .promo-tile--product figure {
     background-color: #ffffff;
     padding: 20px;
     place-items: center;
+    padding-top: 0px;
 }
 .promo-tile--image-on-right figure {
     flex-direction: row-reverse;

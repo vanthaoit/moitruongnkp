@@ -15,7 +15,7 @@
         <ul class="nav navbar-nav">
           
           <ng-container *ngFor="let menuChild of _menuService; let i=index">
-            <li *ngIf="menuChild.hasChild === null"><a (click)="switchMenu()" href="/{{menuChild.target}}/{{menuChild.url}}" data-title="{{menuChild.name}}">{{menuChild.name}}</a></li>
+            <li *ngIf="menuChild.hasChild === null"><a (click)="switchMenu()" href="/portal/{{menuChild.url}}" data-title="{{menuChild.name}}">{{menuChild.name}}</a></li>
             <li *ngIf="menuChild.hasChild !== null" class="dropdown">
               <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-title="service" data-toggle="dropdown">{{menuChild.name}} <b class="caret"></b></a>
               <ul class="dropdown-menu multi-column columns-3 menu-position data-content-wrapper">

@@ -30,6 +30,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^3.4.1",
     "core-js": "^3.6.4",
+    "domsanitizer": "^0.2.2",
     "easy-responsive-tabs": "0.0.2",
     "firebase": "^7.16.0",
     "font-awesome": "^4.7.0",

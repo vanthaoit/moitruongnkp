@@ -1,5 +1,5 @@
 export class BaseSystemConstants{
-    public static URL_ENDPOINT = "https://apimoitruongnkp.truongthinhmanufacture.com";
+    public static URL_ENDPOINT = "https://api.moitruongnkp.com";
     //public static URL_ENDPOINT = "http://localhost:3500";
     public static URL_TOKEN = "/connect/token";
     public static URL_USER_INFO = "/connect/userinfo";

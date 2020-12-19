@@ -1,0 +1,86 @@
+<div class="col-md-3 templatemo-sidebar">
+  <ul class="templatemo-sidebar-menu index_banner_left">
+    <div class="highlight-event__title">Sản phẩm & dịch vụ</div>
+
+    <ng-container *ngFor="let menuChild of _menuService; let i = index">
+      <li *ngIf="menuChild.hasChild === null">
+        <a
+          href="/{{ menuChild.target }}/{{ menuChild.url }}"
+          data-title="{{ menuChild.name }}"
+          ><i class="fa fa-database"></i> {{ menuChild.name }}</a
+        >
+      </li>
+      <li *ngIf="menuChild.hasChild !== null" class="sub">
+        <a (click)="clickSub($event)" href="javascript:;">
+          <i class="fa fa-database"></i> {{ menuChild.name }}
+          <div class="pull-right"><span class="caret"></span></div>
+        </a>
+        <ul class="templatemo-submenu">
+          <ng-container *ngFor="let item of _dataCategories; let j = index">
+            <li *ngIf="item.menuId ==menuChild.id"><a href="/portal/dich-vu/{{item.alias}}">{{item.name}}</a></li>
+          </ng-container>
+         
+        </ul>
+      </li>
+    </ng-container>
+    <!-- <li class="sub">
+      <a (click)="clickSub($event)" href="javascript:;">
+        <i class="fa fa-database"></i> Vật liệu lọc & Hóa chất
+        <div class="pull-right"><span class="caret"></span></div>
+      </a>
+      <ul class="templatemo-submenu">
+        <li><a href="#">Vật liệu lọc</a></li>
+        <li><a href="#">Thiết bị lọc</a></li>
+        <li><a href="#">Hóa chất</a></li>
+      </ul>
+    </li>
+    <li class="sub">
+      <a (click)="clickSub($event)" href="javascript:;">
+        <i class="fa fa-database"></i> Sản phẩm
+        <div class="pull-right"><span class="caret"></span></div>
+      </a>
+      <ul class="templatemo-submenu">
+        <li><a href="#">Chế phẩm vi sinh</a></li>
+        <li><a href="#">Phân hữu cơ</a></li>
+        <li><a href="#">Máy lọc nước tinh khiết RO</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="data-visualization.html"
+        ><i class="fa fa-database"></i><span class="badge pull-right">9</span>Xử
+        lý nước thải</a
+      >
+    </li>
+    <li>
+      <a href="maps.html"
+        ><i class="fa fa-database"></i
+        ><span class="badge pull-right">42</span>Xử lý nước cấp</a
+      >
+    </li>
+    <li>
+      <a href="maps.html"
+        ><i class="fa fa-database"></i
+        ><span class="badge pull-right">42</span>Tư vấn môi trường</a
+      >
+    </li>
+    <li class="">
+      <a (click)="clickSub($event)" href="javascript:;">
+        <i class="fa fa-database"></i> Hệ thống rau sạch & rau an toàn
+        <div class="pull-right"></div>
+      </a>
+    </li>
+    <li>
+      <a href="maps.html"
+        ><i class="fa fa-database"></i
+        ><span class="badge pull-right">42</span>Tham khảo</a
+      >
+    </li> -->
+  </ul>
+  <ul class="templatemo-sidebar-menu index_banner_left">
+    <h2 class="highlight-event__title">Có gì mới !!!</h2>
+    <li>
+      <div class="about-index" id="represented-item"></div>
+    </li>
+  </ul>
+</div>

@@ -1,19 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IndexComponent } from './index.component';
-import {RouterModule,Routes} from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { IndexComponent } from "./index.component";
+import { RouterModule, Routes } from "@angular/router";
+import { AllRelativeProductModule } from "../../shared/all-relative-product/all-relative-product.module";
 
-
-export const indexRoutes: Routes =[
+export const indexRoutes: Routes = [
   //4200/main/user/index
-  {path:'',component:IndexComponent}
+  { path: "", component: IndexComponent },
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(indexRoutes)
+    AllRelativeProductModule,
+    RouterModule.forChild(indexRoutes),
   ],
-  declarations: [IndexComponent]
+  declarations: [IndexComponent],
 })
-export class IndexModule { }
+export class IndexModule {}

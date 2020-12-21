@@ -56,6 +56,12 @@ $(document).ready(function () {
     filterValue += "." + wordPage;
     changeFilter(filterValue);
   }
+  // function goToCurrentPage(n){
+  //   currentPage = n;
+  //   var wordPage = currentPage.toString();
+  //   $('.tm-gallery-item').addClass('close-items');
+  //   $('.'+wordPage).removeClass('close-items');
+  // }
 
   function defineItemsPerPage() {
     var pages = itemsPerPageDefault;
@@ -121,31 +127,32 @@ $(document).ready(function () {
 
           if (currentPage == i + 1) {
             $pager = $(
-              '<a href="javascript:void(0);" class="active tm-paging-link" ' +
+              '<button href="javascript:;" class="active tm-paging-link" (click)="clickPaging($event)" ' +
                 pageAttribute +
                 '="' +
                 (i + 1) +
-                '"></a>'
+                '"></button>'
             );
           } else {
             $pager = $(
-              '<a href="javascript:void(0);" class="tm-paging-link" ' +
+              '<button href="javascript:;" class="tm-paging-link" (click)="clickPaging($event)" ' +
                 pageAttribute +
                 '="' +
                 (i + 1) +
-                '"></a>'
+                '"></button>'
             );
           }
 
           $pager.html(i + 1);
 
-          $pager.click(function () {
-            $(".tm-paging-link").removeClass("active");
-            $(this).addClass("active");
-            var page = $(this).eq(0).attr(pageAttribute);
-            goToPage(page);
-          });
-          $pager.appendTo($isotopePager);
+          // $pager.click(function () {
+          //   $(".tm-paging-link").removeClass("active");
+          //   $(this).addClass("active");
+          //   var page = $(this).eq(0).attr(pageAttribute);
+          //   //goToPage(page);
+          //   goToCurrentPage(page);
+          // });
+          //$pager.appendTo($isotopePager);
         }
       }
       $container.after($isotopePager);

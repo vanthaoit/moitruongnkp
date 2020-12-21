@@ -119,7 +119,7 @@ a.tm-paging-link:hover {
   min-height: 250px;
   width: 48%;
   /* background: #3085a3; */
-  background:none;
+  background: none;
   text-align: center;
   cursor: pointer;
   background: black;
@@ -264,4 +264,7 @@ figure.effect-honey:hover ul li a {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+.close-items {
+  display: none;
 }

@@ -3,12 +3,14 @@ import * as ReactDOM from 'react-dom';
 import { Injector } from '@angular/core';
 import { RouterConstants } from '../../../core/common/router.constants';
 import { title } from 'process';
+import { HTMLComponent } from 'react-typescript-raw-html';
 
 
 interface IReactApplication {
     injector: Injector;
     passData: any;
     title:any;
+    description:any;
 }
 
 class ReactData extends React.Component<IReactApplication, any> {
@@ -16,7 +18,8 @@ class ReactData extends React.Component<IReactApplication, any> {
         super(props);
         this.state = {
             passData: this.props.passData,
-            title:this.props.title
+            title:this.props.title,
+            description:this.props.description
         };
     }
 
@@ -54,13 +57,9 @@ class ReactData extends React.Component<IReactApplication, any> {
                         className="promo-tile__hero promo-tile--text col-md-6 col-sm-12 col-xs-12 px-0 banner-shadow"
                         >
                         <h3 className="h3">{this.props.title}</h3>
-                        <p className="text">
-                            Egestas etiam nec consequat nunc viverra. Nisl et suscipit feugiat
-                            risus at ornare vitae. Duis lobortis sed varius suscipit.
-                            Ullamcorper sem donec vulputate cursus netus varius ipsum nisl elit.
-                            Lectus fermentum ac nam sapien sagittis quisque. Arcu pharetra, hac
-                            duis habitasse tortor.
-                        </p>
+                        <div className="text">
+                            <HTMLComponent rawHTML={this.props.description} />
+                        </div>
                         </figcaption>
                     </figure>
                     </div>
@@ -83,10 +82,11 @@ export class ReactDataApplication {
         containerId: string,
         injector: Injector,
         passData: any,
-        title:any
+        title:any,
+        description:any
     ) {
         ReactDOM.render(
-            <ReactData injector={injector} passData={passData} title={title} />,
+            <ReactData injector={injector} passData={passData} title={title} description={description} />,
             document.getElementById(containerId)
         );
 

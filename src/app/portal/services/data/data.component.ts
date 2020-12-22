@@ -25,6 +25,7 @@ export class DataComponent implements OnInit {
   _dataHttpService: any[];
   _dataCategory: any[];
   _test: any;
+  _description:any;
   private routeSub: Subscription;
   _aliasTarge: string;
   _title:string;
@@ -75,11 +76,13 @@ export class DataComponent implements OnInit {
     
             this._lastBreabcrumb = ","+resp[0].content;
             this._title = resp[0].content;
+            this._description = resp[0].description;
             ReactDataApplication.initialize(
               "product-detail",
               this.injector,
               this._dataHttpService,
-              this._title
+              this._title,
+              this._description
             );
           },
           (error) => {

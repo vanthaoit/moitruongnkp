@@ -48,7 +48,7 @@
 
 .tm-paging-link {
   display: flex;
-  float: left;
+  float: right;
   width: 40px;
   height: 40px;
   align-items: center;
@@ -142,10 +142,23 @@ a.tm-paging-link:hover {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.tm-gallery figure figcaption h2,
-.tm-gallery figure figcaption h2 i {
+.tm-gallery figure figcaption .quick-information,
+.tm-gallery figure figcaption .quick-information h4,
+.tm-gallery figure figcaption .quick-information div {
   color: #fff;
   text-align: center;
+}
+.tm-gallery figure figcaption .quick-information div {
+  font-size: 10px;
+  margin-left: 5px;
+  
+}
+.tm-gallery figure figcaption .quick-information div ul li,
+.tm-gallery figure figcaption .quick-information div p{
+  color: #fff;
+  text-align: justify;
+  text-transform: initial;
+  font-family: system-ui;
 }
 
 .tm-gallery figure figcaption::before,
@@ -172,16 +185,16 @@ a.tm-paging-link:hover {
   opacity: 0;
 }
 
-.tm-gallery figure h2 {
-  word-spacing: -0.15em;
+.tm-gallery figure .quick-information {
+  word-spacing: 0em;
   font-weight: 300;
 }
 
-.tm-gallery figure h2 span {
+.tm-gallery figure .quick-information span {
   font-weight: 800;
 }
 
-.tm-gallery figure h2,
+.tm-gallery figure .quick-information,
 .tm-gallery figure p {
   margin: 0;
 }
@@ -222,26 +235,27 @@ figure.effect-honey figcaption::before {
   transform: translate3d(0, 10px, 0);
 }
 
-figure.effect-honey h2 {
+figure.effect-honey .quick-information {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 1.6rem;
+  font-size: 14px;
   padding: 1em;
   width: 100%;
   text-align: left;
   -webkit-transform: translate3d(0, -30px, 0);
   transform: translate3d(0, -30px, 0);
+  opacity: 0;
 }
-
-figure.effect-honey h2 i {
+/* 
+figure.effect-honey .quick-information i {
   font-style: normal;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0, -30px, 0);
   transform: translate3d(0, -30px, 0);
-}
+} */
 
 figure.effect-honey ul li a {
   opacity: 0;
@@ -252,14 +266,14 @@ figure.effect-honey ul li a {
 }
 
 figure.effect-honey figcaption::before,
-figure.effect-honey h2 {
+figure.effect-honey .quick-information {
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
 }
 
 figure.effect-honey:hover figcaption::before,
-figure.effect-honey:hover h2,
-figure.effect-honey:hover h2 i,
+figure.effect-honey:hover .quick-information,
+figure.effect-honey:hover .quick-information i,
 figure.effect-honey:hover ul li a {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -267,4 +281,7 @@ figure.effect-honey:hover ul li a {
 }
 .close-items {
   display: none;
+}
+.paging-gallery{
+  margin-left: 10px;
 }

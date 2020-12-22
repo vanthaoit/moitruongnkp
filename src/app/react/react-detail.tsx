@@ -87,15 +87,14 @@ class ReactDetail extends React.Component<IReactBidirectionalProduct, any> {
               <div className="single-infoagile"></div>
               <div className="product-single-w3l">
                 <p>
-                  <i className="fa fa-hand-o-right" aria-hidden="true"></i>This
-                  is a<label>Vegetarian</label> product.
+                  <i className="fa fa-hand-o-right" aria-hidden="true"></i><label>Thông tin chi tiết</label>.
                 </p>
                 <HTMLComponent rawHTML={this.state.details.description} />
-                <p>
+                {/* <p>
                   <i className="fa fa-refresh" aria-hidden="true"></i>All food
                   products are
                   <label>non-returnable.</label>
-                </p>
+                </p> */}
                 <div className="message-content">
                      <HTMLComponent rawHTML={this.state.details.content} />
                 </div>

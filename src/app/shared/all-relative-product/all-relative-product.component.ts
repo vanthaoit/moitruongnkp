@@ -20,7 +20,7 @@ declare var $: any;
 })
 export class AllRelativeProductComponent implements OnInit {
   _products: any[];
-  theFirstTime:boolean = true;
+  theFirstTime: boolean = true;
   itemsPerPageDefault: number = 9;
   positionPage: string = ".paging-gallery";
   constructor(
@@ -49,45 +49,40 @@ export class AllRelativeProductComponent implements OnInit {
         this.initialPaging(totalPage);
       });
 
-    // this._httpService.get("productcategory/getall").subscribe(
-    //   (resp: any[]) => {
-    //     this._products = resp.filter((x) => x.isActive == true);
-    //     console.log("_products = " + this._products);
-    //   },
-    //   (error) => {
-    //     debugger;
-    //     this._httpService.handleError(error);
-    //   }
-    // );
+   
   }
   ngDoCheck() {
-    if(this.theFirstTime)
-    this.goToCurrentPage("1");
+    if (this.theFirstTime) {
+      this.goToCurrentPage("1");
+      $("#page-id1").addClass("active");
+    }
   }
-
 
   clickPaging(event) {
     this.theFirstTime = false;
-    $(".tm-paging-link").removeClass("active");
-    let currentId = "#"+event.target.id;
-    $(currentId).addClass("active");
-    var page = $(event.target).eq(0).attr("data-page");
-    //goToPage(page);
-    this.goToCurrentPage(page);
+    var clickInto = event.target.id;
+    if (clickInto !== undefined && clickInto !== null && clickInto !== "") {
+      $(".tm-paging-link").removeClass("active");
+      let currentId = "#" + clickInto;
+      $(currentId).addClass("active");
+      var page = $(event.target).eq(0).attr("data-page");
+      this.goToCurrentPage(page);
+    }
   }
   goToCurrentPage(n) {
     let currentPage = n;
-    if(currentPage !== undefined){
+    if (currentPage !== undefined) {
       var wordPage = currentPage.toString();
       $(".tm-gallery-item").addClass("close-items");
       $("." + wordPage).removeClass("close-items");
     }
-    
   }
   initialPaging(totalPaging) {
     for (let i = 1; i <= totalPaging; i++) {
       var pager = $(
-        '<a href="javascript:;" class="tm-paging-link" id="page-id'+i+'" (click)="clickPaging($event)" data-page="' +
+        '<a href="javascript:;" class="tm-paging-link" id="page-id' +
+          i +
+          '" (click)="clickPaging($event)" data-page="' +
           i +
           '">' +
           i +

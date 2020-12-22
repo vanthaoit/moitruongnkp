@@ -162,15 +162,15 @@ $(document).ready(function () {
   setPagination();
   goToPage(1);
 
-  $(".tm-gallery-link").click(function (e) {
-    e.stopPropagation();
-    var filter = $(this).data("filter");
-    currentFilter = filter;
-    setPagination();
-    goToPage(1);
-    $(".tm-gallery-link").removeClass("active");
-    $(e.target).addClass("active");
-  });
+  // $(".tm-gallery-link").click(function (e) {
+  //   e.stopPropagation();
+  //   var filter = $(this).data("filter");
+  //   currentFilter = filter;
+  //   setPagination();
+  //   goToPage(1);
+  //   $(".tm-gallery-link").removeClass("active");
+  //   $(e.target).addClass("active");
+  // });
 
   // sidebar menu click
   // $(".templatemo-sidebar-menu li.sub a").click(function (e) {

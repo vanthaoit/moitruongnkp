@@ -5,7 +5,7 @@ import {BehaviorSubject} from 'rxjs';
 })
 export class BreadcrumbUrlService {
 
-  breadcrumbSource = new BehaviorSubject<string>("default message");
+  breadcrumbSource = new BehaviorSubject<string>("portal page");
   currentBreadcrumb = this.breadcrumbSource.asObservable();
   constructor() { }
   changeMessage(message) {

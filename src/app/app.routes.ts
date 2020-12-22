@@ -7,10 +7,13 @@ export const appRoutes: Routes = [
    //localhost:4200
    { path: '', redirectTo: 'portal', pathMatch: 'full' },
 
-   { path: 'portal', loadChildren: './portal/portal.module#PortalModule' }
+   { path: 'portal', loadChildren: './portal/portal.module#PortalModule' },
    //localhost:4200/login
    // { path: 'login', loadChildren: './login/login.module#LoginModule' }
 
+   {
+      path:'**', redirectTo: '/portal/tuyen-dung'
+   }
 
 
 
